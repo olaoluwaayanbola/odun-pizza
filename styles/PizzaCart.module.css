@@ -1,0 +1,40 @@
+.container{
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:20px 40px;
+    cursor: pointer;
+}
+.container:hover{
+    background-color: rgba(209, 65, 30,0.4);
+    border-radius: 2px;
+}
+.title{
+    color: #d1411e;
+    font-size: 18px;
+    font-weight: bold;
+}
+.price{
+    color: #666;
+    font-size: 18px;
+    font-weight: bold;
+}
+.description{
+    text-align: center;
+}
+@media screen and (max-width: 480px) {
+    .container {
+      width: 100%;
+    }
+  
+    .title {
+      font-size: 30px;
+    }
+  
+    .price,
+    .description{
+      font-size: 24px;
+    }
+  }
