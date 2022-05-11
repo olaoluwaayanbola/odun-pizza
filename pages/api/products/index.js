@@ -1,32 +1,17 @@
 import dbConnect from "../../../util/mongo";
-import Product from '../../../models/Product'
+import Product from "../../../Models/Product"; 
 
 export default async function handler(req, res) {
-  const { method } = req;
-
-  // const token = cookies.token
-
- dbConnect();
-
-  if (method === "GET") {
-    try {
-      const products = await Product.find();
-      res.status(200).json(products);
-    } catch (err) {
-      res.status(500).json(err);
-    }
+    dbConnect()
+    const {method} = req
+    if (method === 'POST') {
+        try {
+            const product = await Product.create(req.body);
+            console.log(req.body)
+            res.status(201).json(product);
+          } catch(err){
+            res.status(500).json(err);
+        }
+    } 
   }
-
-  if (method === "POST") {
-    try {
-      const product = await Product.create(req.body);
-      res.status(201).json(product);
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  }
-}
-
-// export default function handler(req,res){
-//   res.status(200).json({name:'olaoluwa'})
-// }
+  

@@ -31,14 +31,6 @@ const ProductSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-// {
-//   "title":"yr",
-//   "desc":"prices",
-//   "img":"/Img/pizza.png",
-//   "prices":[12,13,14],
-//   "extraOptions":[{
-//       "text":"spicy sauce",
-//       "price":2
-//   }]
+
 export default mongoose.models.Product ||
   mongoose.model("Product", ProductSchema);

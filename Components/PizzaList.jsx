@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../styles/Pizzalist.module.css'
 import PizzaCard from './PizzaCard'
+import Link from 'next/link'
 const PizzaList = () => {
   return (
     <div className={styles.container}>
