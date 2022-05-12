@@ -2,7 +2,9 @@ import React from 'react'
 import styles from '../styles/Navbar.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useSelector } from 'react-redux'
 const Navbar = () => {
+    const quantity = useSelector(state => state.cart.quantity)
   return (
     <div className={styles.conatainer}>
         <div className={styles.items}>
@@ -32,7 +34,10 @@ const Navbar = () => {
         <div className={styles.items}>
             <div className={styles.cart}>
                 <Image src='/Img/cart.png' alt='' width="30px" height="30px"></Image>
-            <div className={styles.counter}>2</div>            </div>
+            <div className={styles.counter}>
+                {quantity}
+            </div>            
+            </div>
         </div>
     </div>
   )
