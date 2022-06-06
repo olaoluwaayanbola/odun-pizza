@@ -1,13 +1,19 @@
 import React from 'react'
-import styles from '../styles/Featured.module.css'
+import styles from '../styles/Featured.module.scss'
 import Image from 'next/image'
-
+import { useContext } from 'react'
+import { globalcontext } from '../contex/theme'
 const Featured = () => {
+  const {themeState} = useContext(globalcontext)
+
+  const style = {
+    backgroundColor:"#d5d5c7"
+  }
   const [state,setState] = React.useState(0)
   const SlideData = [
-    '/Img/featured.png',
-    '/Img/featured2.png',
-    '/Img/featured3.png'
+    '/Img/burg2.png',
+    '/Img/spag.png',
+    '/Img/www.png',
   ]
   const HandleSlide = (id)=>{
     if (id == 'l') {
@@ -18,7 +24,7 @@ const Featured = () => {
     }
   }
   return (
-    <div className={styles.Container} >
+    <div className={styles.Container}  style={ themeState ?null:style}>
         <div className={styles.containerArrow} style = {{left:0}} onClick={()=>HandleSlide("l")} >
           <Image src='/Img/arrowl.png' alt='' layout='fill'></Image>
         </div>

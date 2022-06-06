@@ -1,10 +1,12 @@
 import styles from '../../styles/Product.module.css'
 import Image from 'next/image'
+import Button from '@mui/material/Button';
 import react,{useState} from 'react'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { productscalc } from '../../redux/cartSlice'
-
+import { globalcontext } from '../../contex/theme'
+import { useContext } from 'react'
 
 
 const Products = ({Data}) => {
@@ -13,7 +15,17 @@ const Products = ({Data}) => {
     const [quantity, setQuantity] = useState(1);
     const [extras, setExtras] = useState([]);
     const dispatch = useDispatch()
-
+    const {themeState,toggle} = useContext(globalcontext)
+    
+    const style={
+        white:{
+          backgroundColor:"#d7d7d7",
+          color:"rgb(27, 27, 29)"
+        },
+        black:{
+          color:"rgb(59, 55, 55)"
+        }
+    }
     const changePrice = (number) => {
       setPrice(price + number);
     };
@@ -55,34 +67,32 @@ const Products = ({Data}) => {
     // }
   
   return (
-    <div className={styles.container}>
+    <div className={styles.containerx} style={ themeState ?null:style.white}>
+          <div className={styles.container}>
         <div className={styles.left}>
             <div className={styles.ImgContainer}>
                 <Image src={Data.img} objectFit='contain' layout="fill"></Image>
             </div>
         </div>
         <div className={styles.right}>
-            <div className={styles.title}>{Data.name}</div>
-            <span className={styles.price}>{price}</span>
+            <div className={styles.title}>{Data.title}</div>
+            <span className={styles.price} style={ themeState ?style.black:style.white}>${price}</span>
             <span className={styles.desc}>{Data.desc}</span>
             <h3 className={styles.choose}>
-                Choose the size
+                Choose Portion
             </h3>
             <div className={styles.sizes}>
                 <div className={styles.size}>
-                    <Image src='/Img/size.png' layout='fill' alt='' onClick={()=>{HandleSize(0)}}></Image>
-                    <span className={styles.number}>Small</span>
+                    <span className={styles.number} onClick={()=>{HandleSize(0)}}>Small</span>
                 </div>
                 <div className={styles.size}>
-                    <Image src='/Img/size.png' layout='fill' alt='' onClick={()=>{HandleSize(1)}}></Image>
-                    <span className={styles.number}>Medium</span>
+                    <span className={styles.number} onClick={()=>{HandleSize(1)}}>Medium</span>
                 </div>
                 <div className={styles.size}>
-                    <Image src='/Img/size.png' layout='fill' alt='' onClick={()=>{HandleSize(2)}}></Image>
-                    <span className={styles.number}>Large</span>
+                    <span className={styles.number} onClick={()=>{HandleSize(2)}}>Large</span>
                 </div>
             </div>
-            <h3 className={styles.choose}>Choose additional ingredients</h3>
+            <h3 className={styles.choose}>Choose Sides</h3>
             <div className={styles.ingredients}>
                 {Data.extraOptions.map(ele =>{
                     return <div className={styles.option} key={ele._id}>
@@ -108,6 +118,7 @@ const Products = ({Data}) => {
 
             </div>
         </div>
+    </div>
     </div>
   )
 }

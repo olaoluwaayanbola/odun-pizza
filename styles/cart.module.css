@@ -1,7 +1,10 @@
 .container{
     display: flex;
     padding: 20px;
-}
+    background-color: rgb(27, 27, 29);
+    color: whitesmoke;
+  }
+
 .left {
   flex: 2;
 }
@@ -25,17 +28,22 @@
 .wrapper {
   width: 90%;
   max-height: 300px;
-  background-color: #333;
+  background-color: rgb(238, 228, 228);
   padding: 50px;
   padding-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: white;
-  
+  color: rgb(27, 27, 29);
+  border-top-left-radius:10px ;
+  border-bottom-right-radius:10px ;
+}
+.title{
+  color: #d1411e;
 }
 .totalTextTitle {
   margin-right: 10px;
+ 
 }
 .button {
   height: 30px;
@@ -57,8 +65,9 @@
     justify-content: center;
   }
 
-  .trTitle {
+  .trTitles{
     display: none;
+    color: #d1411e;
   }
 
   .tr {

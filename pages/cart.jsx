@@ -8,14 +8,44 @@ import {
     usePayPalScriptReducer
 } from "@paypal/react-paypal-js";
 import { useState } from 'react';
+import { useRouter } from "next/router";
+import { clear } from "../redux/cartSlice";
+import axios from 'axios';
+import { globalcontext } from '../contex/theme'
+import { useContext } from 'react'
 
 const cart = () => {
     const dispatch = useDispatch()
     const selector = useSelector(state => state.cart)
     const [stateCheck,setCheckout] = useState(false)
-    const amount = "2";
+    const amount = selector.total;
     const currency = "USD";
     const style = {"layout":"vertical"};
+    const router = useRouter()
+    const {themeState} = useContext(globalcontext)
+
+    const styleb={
+        white:{
+          backgroundColor:"#d7d7d7",
+          color:"rgb(27, 27, 29)"
+        },
+        black:{
+          color:"rgb(59, 55, 55)"
+        }
+    }
+    const createOrder = async (data) => {
+        try {
+          const res = await axios.post("http://localhost:3000/api/orders", data);
+          if (res.status === 200) {
+            dispatch(clear());
+            router.push(`/order/${res.data._id}`);
+          }
+        } catch (err) {
+          console.log(err);
+        }
+      };
+
+
     const ButtonWrapper = ({ currency, showSpinner }) => {
         // usePayPalScriptReducer can be use only inside children of PayPalScriptProviders
         // This is the main reason to wrap the PayPalButtons in a new component
@@ -58,7 +88,13 @@ const cart = () => {
                     }}
           onApprove={function (data, actions) {
             return actions.order.capture().then(function (details) {
-              console.log(details)
+                const shipping = details.purchase_units[0].shipping;
+                createOrder({
+                  customer: shipping.name.full_name,
+                  address: shipping.address.address_line_1,
+                  total: cart.total,
+                  method: 1,
+                });
             });
           }}
                 />
@@ -66,11 +102,11 @@ const cart = () => {
         );
     }
     return (
-    <div className={styles.container}>
+    <div className={styles.container} style={ themeState ?null:styleb.white}>
         <div className={styles.left}>
             <table className={styles.table}>
                 <tbody>
-                    <tr className={styles.trTitle} >
+                    <tr className={styles.trTitles} >
                         <th>Product</th>
                         <th>Name</th>
                         <th>Extras</th>
@@ -84,7 +120,7 @@ const cart = () => {
                         <tr className={styles.tr}>
                             <td>
                                 <div className={styles.IMGContainer}>
-                                    <Image src='/Img/Pizza.png' objectFit='cover' alt="" layout='fill'/>
+                                    <Image src={product.img}objectFit='cover' alt="" layout='fill'/>
                                 </div>
                             </td>
                             <td className={styles.name}>

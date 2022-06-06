@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+$primary-color: rgb(27, 27, 29);
+
+.container{
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:$primary-color;
+    
+    .title{
+      font-family: 'Macondo', cursive;
+      color: #d1411e;
+      font-weight: lighter;
+    }
+    .description{
+      font-family: 'Cinzel', serif;
+      font-size: 18px;
+      width: 78%;
+  }
+  .wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 84%;
+      margin: auto;
+      margin-top: 50px;
+      
+  }
+  @media screen and (max-width: 480px) {
+      .title {
+        text-align: center;
+      }
+    
+      .description{
+        width: 90%;
+        text-align: center;
+      }
+    }
+  
+  }
