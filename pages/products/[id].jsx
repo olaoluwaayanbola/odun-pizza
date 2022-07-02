@@ -1,7 +1,6 @@
 import styles from "../../styles/Product.module.css";
 import Image from "next/image";
-import Button from "@mui/material/Button";
-import react, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { productscalc } from "../../redux/cartSlice";
