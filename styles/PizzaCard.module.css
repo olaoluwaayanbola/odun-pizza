@@ -1,12 +1,12 @@
 .container {
-  width: 22%;
+  width: 25%;
   padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px 40px;
   cursor: pointer;
+  background-color: aqua;
 }
 
 .title {
@@ -18,12 +18,12 @@
 .price {
   font-size: 18px;
   font-weight: bold;
-  color: #666;
+ 
 }
 
 .desc {
-  text-align: center;
-  color: #777;
+  display: block;
+  width: 100%;
 }
 
 @media screen and (max-width: 480px) {

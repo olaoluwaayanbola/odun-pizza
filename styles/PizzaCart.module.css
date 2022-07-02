@@ -1,28 +1,32 @@
 .container{
-    width: 22%;
+    width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding:20px 40px;
     cursor: pointer;
+    border-radius: 2px;
+    transition-delay: 0.15;
+    color: rgb(59, 55, 55);
 }
 .container:hover{
-    background-color: rgba(209, 65, 30,0.4);
-    border-radius: 2px;
+    border: 2px solid #d1411e;
+    
 }
 .title{
     color: #d1411e;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 600;
 }
 .price{
-    color: #666;
+    
     font-size: 18px;
     font-weight: bold;
 }
 .description{
-    text-align: center;
+  display: block;
+  width: 90%;
 }
 @media screen and (max-width: 480px) {
     .container {
