@@ -14,5 +14,5 @@ it has the functionality of darkmode which was created using context api
 i used papypal as the payment method when devloping the app it was a bit tricky but i got it done
 
 Setup to run locally:
-- run ```npm i && npm start```
+- run ```npm i && npm run dev```
 
