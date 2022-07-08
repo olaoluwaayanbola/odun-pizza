@@ -141,4 +141,5 @@ export const getServerSideProps = async ({ params }) => {
     },
   };
 };
+
 export default Products;
