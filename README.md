@@ -9,9 +9,9 @@
 ![Portfolio Website](/images/2022-07-08%20(6).png)
 
 
-This is s food ordering web application made with Next js and mongodb 
-it has the functionality of darkmode which was created using context api
-i used papypal as the payment method when devloping the app it was a bit tricky but i got it done
+This is a food ordering web application made with Next js and mongodb 
+it has the has custom built in functionalities like darkmode 
+the app is integrated with papypal and other payment options
 
 Setup to run locally:
 - run ```npm i && npm run dev```
