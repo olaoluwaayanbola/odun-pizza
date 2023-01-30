@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from '../../styles/order.module.css'
 import Image from 'next/image'
+import styles from '../../styles/order.module.css'
 // hkNTGDn7DPVegc--MongoDb authorization
 const Order = () => {
     const state = 0
