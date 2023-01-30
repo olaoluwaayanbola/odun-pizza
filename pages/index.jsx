@@ -1,11 +1,9 @@
-import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Featured from "../Components/Featured";
-import PizzaList from "../Components/PizzaList";
 import axios from "axios";
+import Head from "next/head";
 import { useState } from "react";
+import Featured from "../Components/Featured";
+import styles from "../styles/Home.module.css";
+import PizzaList from "../Components/PizzaList";
 
 export default function Home({ pizzaList }) {
   const [state, setState] = useState(true);

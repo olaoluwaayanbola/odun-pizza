@@ -1,11 +1,10 @@
-import styles from "../../styles/Product.module.css";
-import Image from "next/image";
-import { useState } from "react";
 import axios from "axios";
+import Image from "next/image";
 import { useDispatch } from "react-redux";
-import { productscalc } from "../../redux/cartSlice";
+import { useContext,useState  } from "react";
 import { globalcontext } from "../../contex/theme";
-import { useContext } from "react";
+import { productscalc } from "../../redux/cartSlice";
+import styles from "../../styles/Product.module.css";
 
 const Products = ({ Data }) => {
   const [price, setPrice] = useState(Data.prices[0]);

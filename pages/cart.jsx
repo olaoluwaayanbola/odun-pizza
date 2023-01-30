@@ -1,7 +1,7 @@
-import styles from "../styles/cart.module.css";
 import Image from "next/image";
-import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import styles from "../styles/cart.module.css";
+import { useDispatch, useSelector } from "react-redux";
 import {
   PayPalScriptProvider,
   PayPalButtons,
