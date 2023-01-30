@@ -16,27 +16,25 @@
 <p>
   These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 </p>
-<ol>
-  <li>
-    Clone the repository
-    ---------------------
-    ```
-    $ git clone https://github.com/olaoluwaayanbola/todotypescript
-    ```
-  </li>
-  <li>
-    MongoDB database
-  </li>
-  <li>
-    Dark mode
-  </li>
-  <li>
-    PayPal integration
-  </li>
-  <li>
-    Multiple payment options
-  </li>
-</ol>
+
+
+##Getting Started
+
+Clone the repository
+---------------------
+```
+$ git clone https://github.com/olaoluwaayanbola/todotypescript
+```
+Clone the repository
+---------------------
+```
+$ git clone https://github.com/username/todolist.git
+```
+Clone the repository
+---------------------
+```
+$ git clone https://github.com/username/todolist.git
+ ```
 
 ![Portfolio Website](/images/foodH.png)
 ![Portfolio Website](/images/2022-07-01%20(12).png)
