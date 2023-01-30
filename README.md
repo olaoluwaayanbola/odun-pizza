@@ -17,25 +17,31 @@
   These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 </p>
 
-
-##Getting Started
-
-Clone the repository
+1. Clone the repository
 ---------------------
 ```
-$ git clone https://github.com/olaoluwaayanbola/todotypescript
+$ git clone https://github.com//olaoluwaayanbola/odun-pizza
 ```
-Clone the repository
+2. Navigate to the directory:
 ---------------------
 ```
-$ git clone https://github.com/username/todolist.git
+$ cd food-ordering-app
 ```
-Clone the repository
+3. Install dependencies:
 ---------------------
 ```
-$ git clone https://github.com/username/todolist.git
+$ npm install
  ```
+4. Start the development server:
+---------------------
+```
+$ npm install
+ ```
+ 
+## Contribute ##
+This is an open-source project and contributions are always welcome! Feel free to raise an issue or make a pull request.
 
+## Visual representations of the food ordering app. ##
 ![Portfolio Website](/images/foodH.png)
 ![Portfolio Website](/images/2022-07-01%20(12).png)
 ![Portfolio Website](/images/2022-07-01%20(15).png)
@@ -43,12 +49,3 @@ $ git clone https://github.com/username/todolist.git
 ![Portfolio Website](/images/2022-07-01%20(16).png)
 ![Portfolio Website](/images/2022-07-01%20(18).png)
 ![Portfolio Website](/images/2022-07-08%20(6).png)
-
-
-This is a food ordering web application made with Next js and mongodb 
-it has the has custom built in functionalities like darkmode 
-the app is integrated with papypal and other payment options
-
-Setup to run locally:
-- run ```npm i && npm run dev```
-
