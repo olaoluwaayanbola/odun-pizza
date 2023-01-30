@@ -1,9 +1,9 @@
-#Food Ordering App
+# Food Ordering App #
 <p>
   An open-source food ordering app built with Next.js, MongoDB, and PayPal integration. Offers dark mode and various payment options. Use it as a base for your own       food ordering app or to learn about Next.js and MongoDB.
 </p>
 
-##Features
+## Features ##
 <ol>
   <li>Next.js frontend</li>
   <li>MongoDB database</li>
@@ -12,14 +12,17 @@
   <li>Multiple payment options</li>
 </ol>
 
-##Getting Started
+## Getting Started ##
 <p>
   These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 </p>
 <ol>
   <li>
     Clone the repository:
-    
+    ---------------------
+    ```
+      $ git clone https://github.com/olaoluwaayanbola/todotypescript
+    ```
   </li>
   <li>
     MongoDB database
