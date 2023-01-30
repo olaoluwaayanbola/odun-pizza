@@ -25,7 +25,7 @@ $ git clone https://github.com//olaoluwaayanbola/odun-pizza
 2. Navigate to the directory:
 ---------------------
 ```
-$ cd food-ordering-app
+$ cd odun-pizza
 ```
 3. Install dependencies:
 ---------------------
@@ -35,7 +35,7 @@ $ npm install
 4. Start the development server:
 ---------------------
 ```
-$ npm install
+$ npm run dev
  ```
  
 ## Contribute ##
