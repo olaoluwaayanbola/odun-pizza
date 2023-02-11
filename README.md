@@ -1,4 +1,4 @@
-#Odun Pizza #
+# Odun Pizza #
 <p>
   An open-source food ordering app built with Next.js, MongoDB, and PayPal integration. Offers dark mode and various payment options. Use it as a base for your own       food ordering app or to learn about Next.js and MongoDB.
 </p>
