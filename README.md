@@ -9,7 +9,7 @@
   <li>MongoDB database</li>
   <li>Dark mode</li>
   <li>PayPal integration</li>
-  <li>Multiple payment options</li>
+  <li>Multiple payment options(cash payment with calculation algorithm )</li>
 </ol>
 
 ## Getting Started ##
