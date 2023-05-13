@@ -39,7 +39,7 @@ $ npm run dev
  ```
  
 ## Contribute ##
-This is an open-source project and contributions are always welcome! Feel free to raise an issue or make a pull request.
+This is an open-source project and contributions are always welcome! Feel free to raise an issue or make a pull request .
 
 ## Visual representations of the food ordering app. ##
 ![Portfolio Website](/images/foodH.png)
